@@ -93,18 +93,8 @@ _ __ /_____/_/  |_\____/_/ |_/\____/_/ /_/_____/_/ |_|
 
     # Display a list of options to the user
     Write-Host "     Select a domain to manage:"
-    Write-Host "         1.  Kern County......kernCounty.com" -ForegroundColor "Green"
-    Write-Host "         2.  DA...............kcda.local" -ForegroundColor "Green"
-    Write-Host "         3.  Crime Lab........lab.da.co.kern.ca.us" -ForegroundColor "Green"
-    Write-Host "         4.  Recorder.........rcrd.internal" -ForegroundColor "Green"
-    Write-Host "         5.  County Council...ccdomain.cc.co.kern.ca.us" -ForegroundColor "Green"
-    Write-Host "         6.  Public Health....phdom.local" -ForegroundColor "Green"
-    Write-Host "         7.  Assessor.........ASSESSOR.INTERNAL" -ForegroundColor "Green"
-    Write-Host "         8.  BHRS.............KernBHRS.local" -ForegroundColor "Green"
-    Write-Host "         9.  Elections........elections.accc.co.kern.ca.us" -ForegroundColor "Green"
-    Write-Host "         10. DHS..............kerndhs.com" -ForegroundColor "Green"
-    Write-Host "         11. Auditor..........accc.co.kern.ca.us" -ForegroundColor "Green"
-    Write-Host "         12. PSB/RMANT........RMANT.RMA.CO.KERN.CA.US" -ForegroundColor "Green"
+    Write-Host "         1.  Domain1......domain1.com" -ForegroundColor "Green"
+    Write-Host "         2.  Domain2......Domain2.local" -ForegroundColor "Green"
     Write-Host "         13. Exit"
 
     # Prompt the user for a selection
@@ -121,18 +111,8 @@ _ __ /_____/_/  |_\____/_/ |_/\____/_/ /_/_____/_/ |_|
     # Use a switch statement to execute different codes based on the user's selection
     switch ($selection) {
         # Prompt the user to select an option
-        1 { $domain = "kernCounty" }
-        2 { $domain = "kcda.local" }
-        3 { $domain = "lab" }
-        4 { $domain = "rcrd.internal" }
-        5 { $domain = "ccdomain.cc.co.kern.ca.us" }
-        6 { $domain = "phdom.local" }
-        7 { $domain = "ASSESSOR.INTERNAL" }
-        8 { $Domain = "KernBHRS.local" }
-        9 { $Domain = "elections.accc.co.kern.ca.us" }
-        10 { $Domain = "kerndhs.com" }
-        11 { $Domain = "accc.co.kern.ca.us" }
-        12 { $Domain = "RMANT.RMA.CO.KERN.CA.US" }
+        1 { $domain = "Domain1" }
+        2 { $domain = "Domain2" }
         13 { $exit = $true }
         Default { Write-Host "Invalid selection. Please try again." }
     }
