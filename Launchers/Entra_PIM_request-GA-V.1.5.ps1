@@ -163,10 +163,9 @@ Write-Host ""
 # Tenant selection
 Read-Host "`n                                  Select Tenant to connect to:`n                                  1. County of Kern`n                                  2. Kern County District Attorney Office`n                                  3. Kern County Human Services`n                                  4. KernBHRS`n`n                               Enter the number of the Tenant to connect to: " -OutVariable TenantSelection
 Switch ($TenantSelection) {
-    1 { $TenantId = 'e0f2e4b5-0515-4028-99f2-2e7a43fe5379' }
-    2 { $TenantId = '795d7eb4-bae3-461a-a2ad-4a4c1c54236d' }
-    3 { $TenantId = '03a1b294-969c-49cb-92e2-5490cbd22da9' }
-    4 { $TenantId = '04e5e3da-97ab-45dc-8a57-a66390b2653f' }
+    1 { $TenantId = '[tenant_ID1]' }
+    2 { $TenantId = '[tenant_ID2]' }
+
     Default { Write-Log "Invalid selection, exiting script" -Level Error; exit 1 }
 }
 
