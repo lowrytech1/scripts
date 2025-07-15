@@ -25,19 +25,7 @@ if (-not (Get-Module -ListAvailable -Name GroupPolicy)) {
 }
 
 $domains = @(
-"KernCounty.com"
-"ASSESSOR.internal"
-"ACCC.co.kern.ca.us"
-"KernBHRS.local"
-"CCDomain.cc.co.kern.ca.us"
-"LAB.da.co.kern.ca.us"
-"KCDA.local"
-"KernDHS.com"
-"Elections.accc.co.kern.com"
-"RMANT.rma.co.kern.ca.us"
-"PHDOM.local"
-"RCRD.internal"
-"KCTTC.co.kern.ca.us"
+"your_domain.com"
 )
 $defaultSelection = 1
 
