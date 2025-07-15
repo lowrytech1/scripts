@@ -116,19 +116,14 @@ Write-CenteredText "*** checking for active session ***"
 #[OutputType([int])]
 
 $session = Get-PsSession | Where-Object {
-    ($_.ComputerName -match "ITS-EXCH01.kerncounty.com") -and ($_.State -match "Opened")
+    ($_.ComputerName -match ("[Exch.srv.fqdn.com]") -and ($_.State -match "Opened")
 }
 $session
-<#testing entries                      "
-$MyMailbox = Get-remotemailbox -identity "lowryb@kerncounty.com"
-Write-host "MyMailbox = $MyMailbox"
-#start-sleep -seconds 15
-#>
 
 If (!($session)) {
     $Params = @{
     	ConfigurationName = "Microsoft.Exchange"
-    	ConnectionUri = "https://ITS-EXCH01.kerncounty.com/PowerShell/"
+    	ConnectionUri = "https://[Exch.srv.fqdn.com]/PowerShell/"
     	Authentication = "Basic"
     	AllowRedirect = $True
     } # End Params
