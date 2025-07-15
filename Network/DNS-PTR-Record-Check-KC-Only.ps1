@@ -1,13 +1,13 @@
 ﻿# Gather device information for the DNS comparison.
 $deviceInfo = Read-Host -Prompt 'Input the computer name to view DNS information' 
 
-# DNS Servers currently in use
-$dnsServers = @("11.50.26.177", "11.50.26.178", "11.2.48.106", "11.2.48.107")
+# DNS Servers currently in use - add all DNS servers you want to query
+$dnsServers = @("[dns.srv.ip.add]", "[dns.srv.ip.add]", "[dns.srv.ip.add]", "[dns.srv.ip.add]")
 
 foreach ($servers in $dnsServers) {
     
     # Use the computer hostname to get DNS information.
-    $dnsInfo = Resolve-DnsName -Name $deviceInfo -Server $servers | Where-Object -Property IPAddress -like "11.*.*.*"
+    $dnsInfo = Resolve-DnsName -Name $deviceInfo -Server $servers | Where-Object -Property IPAddress -like "xx.*.*.*"
     $dnsHostname = $dnsInfo.Name
 
     # Use IP address to get reverse DNS information.
