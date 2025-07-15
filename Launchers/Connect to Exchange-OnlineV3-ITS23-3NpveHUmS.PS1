@@ -1,4 +1,4 @@
-Connect to Exchange-Online V3 script by Brian Lowry - 2024
+# Connect to Exchange-Online V3 script by Brian Lowry - 2024
 $startTime = Get-Date
 Write-Host "Start script:" -NoNewline 
 Write-Host "  $startTime" -foregroundcolor "Yellow"
