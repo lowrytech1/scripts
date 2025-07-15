@@ -45,15 +45,9 @@ Function Restart-SpoolerService {
 }
 
 Write-Host "Please select a print server from the following options:" -ForegroundColor White   -BackgroundColor DarkRed
-Write-Host "    1. KCPrint01" -ForegroundColor Blue
-Write-Host "    2. PSBPrint01" -ForegroundColor Blue
-Write-Host "    3. DHS-AD06" -ForegroundColor Blue
-Write-Host "    4. Other Server" -ForegroundColor Blue
-Write-Host "    5. Exit" -ForegroundColor Blue
-#printers to add:
-#KCPRINT02
-#MFPRINTSERVER
-#ITS-FOOTPRINTS
+Write-Host "    1. [printsrv1]" -ForegroundColor Blue
+Write-Host "    2. [printsrv2]" -ForegroundColor Blue
+Write-Host "    3. Exit" -ForegroundColor Blue
 
 # Prompt the user for a selection
 $selection = Read-Host
@@ -62,29 +56,17 @@ $selection = Read-Host
 switch ($selection) {
     1 {
         # Define the remote server's name or IP address
-        $remoteServer = "KCPrint01.Kerncounty.com"
+        $remoteServer = "[printsrv1.your_domain.com]"
         Restart-SpoolerService
     }
 
     2 {
         # Define the remote server's name or IP address
-        $remoteServer = "PSBPrint01.RMANT.RMA.CO.KERN.CA.US"
+        $remoteServer = "[printsrv2.your_other_domain.com]"
         Restart-SpoolerService
     }
 
     3 {
-        # Define the remote server's name or IP address
-        $remoteServer = "DHS-AD06.Dom1.DHS.CO.KERN.CA.US" 
-        Restart-SpoolerService
-    }
-    
-    4 {
-        # Define the remote server's name or IP address
-        $remoteServer = Read-Host -prompt "Print Server Name" 
-        Restart-SpoolerService
-    }
-
-    5 {
         exit
     }
 }
