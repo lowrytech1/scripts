@@ -86,18 +86,8 @@ _ __ /_____/_/  |_\____/_/ |_/\____/_/ /_/_____/_/ |_|
 
     # Display a list of options to the user
     Write-Host "     Select a domain to manage:"
-    Write-Host "         1.  Kern County......kernCounty.com" -ForegroundColor "Green"
-    Write-Host "         2.  DA...............kcda.local" -ForegroundColor "Green"
-    Write-Host "         3.  Crime Lab........lab.da.co.kern.ca.us" -ForegroundColor "Green"
-    Write-Host "         4.  Recorder.........rcrd.internal" -ForegroundColor "Green"
-    Write-Host "         5.  County Council...ccdomain.cc.co.kern.ca.us" -ForegroundColor "Green"
-    Write-Host "         6.  Public Health....phdom.local" -ForegroundColor "Green"
-    Write-Host "         7.  Assessor.........ASSESSOR.INTERNAL" -ForegroundColor "Green"
-    Write-Host "         8.  BHRS.............KernBHRS.local" -ForegroundColor "Green"
-    Write-Host "         9.  Elections........elections.accc.co.kern.ca.us" -ForegroundColor "Green"
-    Write-Host "         10. DHS..............kerndhs.com" -ForegroundColor "Green"
-    Write-Host "         11. Auditor..........accc.co.kern.ca.us" -ForegroundColor "Green"
-    Write-Host "         12. PSB/RMANT........RMANT.RMA.CO.KERN.CA.US" -ForegroundColor "Green"
+    Write-Host "         1.  Domain1......Domain1.com" -ForegroundColor "Green"
+    Write-Host "         2.  Domain2......Domain2.local" -ForegroundColor "Green"
     Write-Host "         13. Exit"
 
     # Prompt the user for a selection
